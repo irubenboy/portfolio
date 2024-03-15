@@ -1,3 +1,8 @@
+:root {
+    --header-height: 48px;
+    --footer-height: 40px;
+}
+
 html {
     font-size: 16px;
 }
@@ -34,4 +39,70 @@ h5 {
 
 h6 {
     font-size: 1rem;
+}
+
+/* App Nav */
+
+.app-header {
+    padding: 8px;
+}
+
+.app-nav {
+    height: var(--header-height);
+    display: flex;
+    place-items: center;
+    background-color: #e7e0e0;
+    padding-inline: 8px;
+    border-radius: 4px;
+}
+
+.app-nav-active {
+    height: 100dvh;
+    backdrop-filter: blur(16px);
+    position: fixed;
+    width: 100%;
+    inset: 0;
+    padding: 8px;
+}
+
+.app-nav-title {
+    flex: 2;
+    text-align: center;
+}
+
+.app-nav-menu {
+    display: none;
+    gap: 3rem;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: transparent;
+    padding: calc(var(--header-height) + 24px) 0;
+}
+
+.app-nav-active .app-nav-menu {
+    display: flex;
+}
+
+.app-nav-social-icons {
+    display: none;
+    position: absolute;
+    bottom: 0;
+}
+
+.app-nav-active .app-nav-social-icons {
+    display: flex;
+}
+
+.app-main {
+    min-height: calc(100dvh - var(--header-height) - var(--footer-height) - 16px);
+}
+
+.app-footer {
+    background-color: antiquewhite;
+    height: var(--footer-height);
 }
