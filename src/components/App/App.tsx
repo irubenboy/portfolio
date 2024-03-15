@@ -1,17 +1,32 @@
-import MenuIcon from '@mui/icons-material/Menu'
 import CopyrightIcon from '@mui/icons-material/Copyright'
 import MoonlightIcon from '@mui/icons-material/DarkMode'
 import GithubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import useNav from '../../hooks/useNav'
 import './App.css'
+import { useEffect } from 'react'
 
 function App() {
+    const { isOpen, Icon, openMenu, closeMenu } = useNav()
+
+    useEffect(() => {
+        console.log(isOpen)
+    }, [isOpen])
+    const handleIconClick = () => {
+        if (isOpen) {
+            closeMenu()
+            return
+        }
+
+        openMenu()
+    }
+
     return (
         <>
             <header className='app-header'>
-                <div className='container'>
+                <div className={`container ${isOpen ? 'app-nav-active' : ''}`}>
                     <nav className='app-nav'>
-                        <MenuIcon />
+                        <span onClick={handleIconClick}><Icon /></span>
                         <h1 className='app-nav-title'>irudev</h1>
                         <div className='app-nav-menu'>
                             <span>Home</span>
