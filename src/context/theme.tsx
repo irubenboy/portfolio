@@ -4,7 +4,7 @@ import { getThemeStorage, setThemeStorage } from '../storage/theme'
 export type ThemeType = 'light' | 'dark'
 
 interface ThemeContextType {
-    theme: ThemeType
+    isDark: boolean
     toggleTheme: () => void
 }
 
@@ -12,7 +12,7 @@ const LIGHT = 'light'
 const DARK = 'dark'
 
 const initContext: ThemeContextType = {
-    theme: LIGHT,
+    isDark: false,
     toggleTheme: () => { }
 }
 const ThemeContext = createContext(initContext)
@@ -22,6 +22,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         return getThemeStorage()
     })
 
+    const [isDark, setDark] = useState(false)
+
     useEffect(() => {
         const bodyClass = document.querySelector('body')?.classList
 
@@ -30,6 +32,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         } else {
             bodyClass?.remove('dark-mode')
         }
+
+        setDark(theme === DARK)
     }, [theme])
 
     const toggleTheme = () => {
@@ -51,7 +55,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     return (
         <ThemeContext.Provider value={{
-            theme,
+            isDark,
             toggleTheme
         }}>
             {children}

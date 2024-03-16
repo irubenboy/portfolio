@@ -1,11 +1,11 @@
 import { useTheme } from '../../context/theme'
 import useNav from '../../hooks/useNav'
-import { CopyrightIcon, GithubIcon, LinkedInIcon, MoonlightIcon } from '../Icons/Icons'
+import { CopyrightIcon, GithubIcon, LinkedInIcon, MoonlightIcon, SunlightIcon } from '../Icons/Icons'
 import './App.css'
 
 function App() {
     const { isOpen, Icon, openMenu, closeMenu } = useNav()
-    const { toggleTheme } = useTheme()
+    const { toggleTheme, isDark } = useTheme()
 
     const handleIconClick = () => {
         if (isOpen) {
@@ -38,7 +38,13 @@ function App() {
                         <div className='app-nav-social-icons'>
                             <span><GithubIcon /></span>
                             <span><LinkedInIcon /></span>
-                            <span onClick={toggleTheme}><MoonlightIcon /></span>
+                            <span onClick={toggleTheme}>
+                                {
+                                    isDark
+                                        ? <SunlightIcon />
+                                        : <MoonlightIcon />
+                                }
+                            </span>
                         </div>
                         <span onClick={handleIconClick} className='app-nav-btn-icon'><Icon /></span>
                     </nav>
