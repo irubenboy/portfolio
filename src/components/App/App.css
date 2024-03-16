@@ -1,6 +1,15 @@
 :root {
     --header-height: 48px;
     --footer-height: 40px;
+    --background: white;
+    --color: #eeeeee;
+    --letter-color: black;
+}
+
+.dark-mode {
+    --color: #1c1c1c;
+    --letter-color: white;
+    --background: black;
 }
 
 html {
@@ -14,6 +23,8 @@ html {
 
 body {
     font-family: Poppins;
+    color: var(--letter-color);
+    background-color: var(--background);
 }
 
 h1 {
@@ -47,12 +58,15 @@ h6 {
     padding: 8px;
 }
 
+.app-header .container {
+    max-width: 1200px;
+}
+
 .app-nav {
     height: var(--header-height);
     display: flex;
-    /* place-items: center; */
     align-items: center;
-    background-color: #e7e0e0;
+    background-color: var(--color);
     padding-inline: 8px;
     border-radius: 4px;
     justify-content: space-between;
@@ -68,7 +82,6 @@ h6 {
 }
 
 .app-nav-langs {
-    /* flex: 2; */
     text-align: center;
 }
 
@@ -98,6 +111,13 @@ h6 {
     display: none;
     position: absolute;
     bottom: 0;
+    place-content: center;
+}
+
+.app-nav-social-icons span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .app-nav-active .app-nav-social-icons {
@@ -117,15 +137,16 @@ h6 {
 }
 
 .app-footer {
-    background-color: antiquewhite;
     height: var(--footer-height);
 }
 
 @media screen and (min-width: 1024px) {
     .app-header {
-        width: 70%;
-        margin: 0 auto;
         font-size: 1.2em;
+    }
+
+    .app-header .container {
+        margin: 0 auto;
     }
 
     .app-nav-menu {
