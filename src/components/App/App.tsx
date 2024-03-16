@@ -19,8 +19,8 @@ function App() {
             <header className='app-header'>
                 <div className={`container ${isOpen ? 'app-nav-active' : ''}`}>
                     <nav className='app-nav'>
-                        <div>
-                            ❤️
+                        <div className='app-nav-profile'>
+                            <img src='/images/profile.png' />
                         </div>
 
                         <div className='app-nav-menu'>
