@@ -1,8 +1,5 @@
-import CopyrightIcon from '@mui/icons-material/Copyright'
-import MoonlightIcon from '@mui/icons-material/DarkMode'
-import GithubIcon from '@mui/icons-material/GitHub'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import useNav from '../../hooks/useNav'
+import { CopyrightIcon, GithubIcon, LinkedInIcon, MoonlightIcon } from '../Icons/Icons'
 import './App.css'
 
 function App() {
