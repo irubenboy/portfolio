@@ -19,21 +19,26 @@ function App() {
             <header className='app-header'>
                 <div className={`container ${isOpen ? 'app-nav-active' : ''}`}>
                     <nav className='app-nav'>
-                        <span onClick={handleIconClick} className='app-nav-btn-icon'><Icon /></span>
-                        <h1 className='app-nav-title'>irudev</h1>
+                        <div>
+                            ❤️
+                        </div>
+
                         <div className='app-nav-menu'>
                             <span>Home</span>
-                            <span>Nav 1</span>
-                            <span>Nav 2</span>
-                            <span>Nav 3</span>
-                            <span>Nav 4</span>
-                            <span>Nav 5</span>
+                            <span>About me</span>
+                            <span>Skills</span>
+                            <span>Projects</span>
+                            <span>Contact</span>
+                        </div>
+                        <div className='app-nav-langs'>
+                            <span>ES</span> / <span>EN</span>
                         </div>
                         <div className='app-nav-social-icons'>
                             <GithubIcon />
                             <LinkedInIcon />
+                            <MoonlightIcon />
                         </div>
-                        <MoonlightIcon />
+                        <span onClick={handleIconClick} className='app-nav-btn-icon'><Icon /></span>
                     </nav>
                 </div>
             </header>
