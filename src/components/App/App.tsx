@@ -4,14 +4,10 @@ import GithubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import useNav from '../../hooks/useNav'
 import './App.css'
-import { useEffect } from 'react'
 
 function App() {
     const { isOpen, Icon, openMenu, closeMenu } = useNav()
 
-    useEffect(() => {
-        console.log(isOpen)
-    }, [isOpen])
     const handleIconClick = () => {
         if (isOpen) {
             closeMenu()
@@ -26,7 +22,7 @@ function App() {
             <header className='app-header'>
                 <div className={`container ${isOpen ? 'app-nav-active' : ''}`}>
                     <nav className='app-nav'>
-                        <span onClick={handleIconClick}><Icon /></span>
+                        <span onClick={handleIconClick} className='app-nav-btn-icon'><Icon /></span>
                         <h1 className='app-nav-title'>irudev</h1>
                         <div className='app-nav-menu'>
                             <span>Home</span>

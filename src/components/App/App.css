@@ -76,12 +76,16 @@ h6 {
     align-items: center;
     flex-direction: column;
     position: fixed;
-    top: 0;
+    top: var(--header-height);
     height: 100%;
     width: 100%;
     left: 0;
     background-color: transparent;
-    padding: calc(var(--header-height) + 24px) 0;
+    padding: var(--header-height) 0;
+}
+
+.app-nav-btn-icon {
+    cursor: pointer;
 }
 
 .app-nav-active .app-nav-menu {

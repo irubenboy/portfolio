@@ -5,17 +5,16 @@ import { useMemo, useState } from 'react'
 export default function useNav() {
     const [open, setOpen] = useState(false)
 
+    const openMenu = () => { setOpen(true) }
+    const closeMenu = () => {
+        setOpen(false)
+    }
+
     const Icon = useMemo(() => {
         if (open) return CloseIcon
 
         return MenuIcon
     }, [open])
-
-    const openMenu = () => { setOpen(true) }
-    const closeMenu = () => {
-        console.log('It is working...')
-        setOpen(false)
-    }
 
     return {
         isOpen: open,
