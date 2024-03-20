@@ -1,0 +1,106 @@
+.app-header {
+    padding: 8px;
+}
+
+.app-header .container {
+    max-width: 1200px;
+}
+
+.app-nav {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    background-color: var(--color);
+    padding-inline: 8px;
+    border-radius: 4px;
+    justify-content: space-between;
+}
+
+.app-nav-active {
+    height: 100dvh;
+    backdrop-filter: blur(16px);
+    position: fixed;
+    width: 100%;
+    inset: 0;
+    padding: 8px;
+}
+
+.app-nav-langs {
+    text-align: center;
+}
+
+.app-nav-menu {
+    display: none;
+    gap: 3rem;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: var(--header-height);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: transparent;
+    padding: var(--header-height) 0;
+}
+
+.app-nav-btn-icon {
+    cursor: pointer;
+}
+
+.app-nav-active .app-nav-menu {
+    display: flex;
+}
+
+.app-nav-social-icons {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    place-content: center;
+}
+
+.app-nav-social-icons span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.app-nav-active .app-nav-social-icons {
+    display: flex;
+}
+
+.app-nav-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+@media screen and (min-width: 1024px) {
+    .app-header {
+        font-size: 1.2em;
+    }
+
+    .app-header .container {
+        margin: 0 auto;
+    }
+
+    .app-nav-menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: 80%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .app-nav-btn-icon {
+        display: none;
+    }
+
+    .app-nav-social-icons {
+        display: flex;
+        position: static;
+        gap: 8px;
+        align-items: center;
+    }
+}
