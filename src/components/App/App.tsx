@@ -67,9 +67,11 @@ function App() {
                                 loop
                             />
                         </h2>
-                        <span className='app-data--secondary'>I am passionate about programming, I love learning and having challenges that help me grow as professional</span>
+                        <p className='app-data--secondary'>I am passionate about programming, I love learning and having challenges that help me grow as professional</p>
                     </article>
-                    <img src='/images/image.jpeg' />
+                    <div className='app-image'>
+                        <img src='/images/image.jpeg' />
+                    </div>
                 </section>
             </main>
             <footer className='app-footer'>

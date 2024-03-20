@@ -134,31 +134,43 @@ h6 {
 
 .app-main {
     min-height: calc(100dvh - var(--header-height) - var(--footer-height) - 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .app-cover {
     display: flex;
     gap: 8px;
     justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
-    margin: 24px auto;
+    margin: 48px 0;
 }
 
-.app-cover img {
-    width: 20%;
+.app-image {
+    flex: 1;
     display: none;
 }
 
+.app-image img {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 4px;
+    filter: drop-shadow(0 0 0.75rem var(--color))
+}
+
 .app-info {
-    width: 100%;
-    text-align: center;
+    flex: 1;
     padding: 16px;
     font-weight: 700;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .app-data-name {
-    font-size: 3em;
+    font-size: 3.5em;
+    line-height: 1;
 }
 
 .app-data--color {
@@ -168,6 +180,7 @@ h6 {
 .app-data--secondary {
     color: grey;
     font-size: 0.85em;
+    line-height: 1.5;
 }
 
 .app-footer {
@@ -201,5 +214,13 @@ h6 {
         position: static;
         gap: 8px;
         align-items: center;
+    }
+
+    .app-info {
+        text-align: left;
+    }
+
+    .app-image {
+        display: block;
     }
 }
