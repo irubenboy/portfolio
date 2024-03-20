@@ -1,3 +1,4 @@
+import { ReactTyped } from 'react-typed'
 import { useTheme } from '../../context/theme'
 import useNav from '../../hooks/useNav'
 import { CopyrightIcon, GithubIcon, LinkedInIcon, MoonlightIcon, SunlightIcon } from '../Icons/Icons'
@@ -51,7 +52,25 @@ function App() {
                 </div>
             </header>
             <main className='app-main'>
-                Coming soon...
+                <section className='app-cover'>
+                    <article className='app-info'>
+                        <h5 className='app-data--color'>Hey 👋🏻, my name is</h5>
+                        <h1 className='app-data-name'>Rubén</h1>
+                        <h2 className='app-data'>
+                            <span className='app-data--color'>
+                                and I&apos;m
+                            </span>{' '}
+                            <ReactTyped
+                                strings={['Full Stack Development', 'Backend development', 'Frontend Developer']}
+                                typeSpeed={500}
+                                backSpeed={200}
+                                loop
+                            />
+                        </h2>
+                        <span className='app-data--secondary'>I am passionate about programming, I love learning and having challenges that help me grow as professional</span>
+                    </article>
+                    <img src='/images/image.jpeg' />
+                </section>
             </main>
             <footer className='app-footer'>
                 <CopyrightIcon /> irudev
