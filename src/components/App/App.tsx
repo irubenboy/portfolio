@@ -1,15 +1,16 @@
 import './App.css'
 import Nav from '../Nav/Nav'
-import HomePage from '../../pages/Home/Home'
 import Footer from '../Footer/Footer'
+import { ThemeProvider } from '../../context/theme'
+import Routes from '../../Routes/Routes'
 
 function App() {
     return (
-        <>
+        <ThemeProvider>
             <Nav />
-            <HomePage />
+            <Routes />
             <Footer />
-        </>
+        </ThemeProvider>
     )
 }
 
