@@ -1,6 +1,7 @@
 import { type ReactNode, createContext, useContext, useState } from 'react'
+import { getLangStorage, setLangStorage } from '../storage/lang'
 
-type LangType = 'en' | 'es'
+export type LangType = 'en' | 'es'
 
 const Languages: Record<string, LangType> = {
     EN: 'en',
@@ -25,14 +26,18 @@ const initial: LangContextType = {
 const LangContext = createContext(initial)
 
 export function LangProvider({ children }: { children: ReactNode }) {
-    const [lang, setLang] = useState<LangType>(Languages.EN)
+    const [lang, setLang] = useState<LangType>(() => {
+        return getLangStorage()
+    })
 
     const toEnglish = () => {
         setLang(Languages.EN)
+        setLangStorage(Languages.EN)
     }
 
     const toSpanish = () => {
         setLang(Languages.ES)
+        setLangStorage(Languages.ES)
     }
 
     const isSpanish = () => lang === Languages.ES
