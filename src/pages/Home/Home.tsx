@@ -3,7 +3,7 @@ import './Home.css'
 
 export default function HomePage() {
     return (
-        <main className='app-main'>
+        <>
             <section className='app-cover'>
                 <article className='app-info'>
                     <h5 className='app-data--color'>Hey 👋🏻, my name is</h5>
@@ -25,6 +25,6 @@ export default function HomePage() {
                     <img src='/images/image.jpeg' />
                 </div>
             </section>
-        </main>
+        </>
     )
 }

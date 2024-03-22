@@ -8,7 +8,9 @@ function App() {
     return (
         <ThemeProvider>
             <Nav />
-            <Routes />
+            <main className='app-main'>
+                <Routes />
+            </main>
             <Footer />
         </ThemeProvider>
     )

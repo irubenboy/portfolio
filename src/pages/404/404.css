@@ -1,0 +1,27 @@
+.not-found-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+}
+
+.not-found-info-title {
+    font-size: 3em;
+    color: var(--primary-color);
+}
+
+.not-found-info-subtitle {
+    font-size: 1.25em;
+}
+
+.not-found-info-text {
+    font-size: 0.75em;
+    color: var(--grey);
+}
+
+@media screen and (min-width: 1024px) {
+    .not-found-section {
+        flex-direction: row;
+    }
+}

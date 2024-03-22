@@ -44,7 +44,7 @@
 }
 
 .app-data--secondary {
-    color: grey;
+    color: var(--grey);
     font-size: 0.85em;
     line-height: 1.5;
 }
