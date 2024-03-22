@@ -54,7 +54,7 @@
 .app-nav-social-icons {
     display: none;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     place-content: center;
 }
 
@@ -66,6 +66,8 @@
 
 .app-nav-active .app-nav-social-icons {
     display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .app-nav-profile {
@@ -74,6 +76,8 @@
     border-radius: 50%;
     background-color: var(--primary-color);
 }
+
+
 
 @media screen and (min-width: 1024px) {
     .app-header {
@@ -102,5 +106,9 @@
         position: static;
         gap: 8px;
         align-items: center;
+    }
+
+    a.app-nav-element-active {
+        color: var(--primary-color);
     }
 }

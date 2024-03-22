@@ -1,6 +1,7 @@
 import { useTheme } from '../../context/theme'
 import useNav from '../../hooks/useNav'
 import { GithubIcon, LinkedInIcon, MoonlightIcon, SunlightIcon } from '../Icons/Icons'
+import NavLink from '../NavLink/NavLink'
 import './Nav.css'
 
 export default function Nav() {
@@ -24,11 +25,11 @@ export default function Nav() {
                     </div>
 
                     <div className='app-nav-menu'>
-                        <span>Home</span>
-                        <span>About me</span>
-                        <span>Skills</span>
-                        <span>Projects</span>
-                        <span>Contact</span>
+                        <NavLink to='/' activeClassName='app-nav-element-active'>Home</NavLink>
+                        <NavLink to='/about' activeClassName='app-nav-element-active'>About me</NavLink>
+                        <NavLink to='/skills' activeClassName='app-nav-element-active'>Skills</NavLink>
+                        <NavLink to='/projects' activeClassName='app-nav-element-active'>Projects</NavLink>
+                        <NavLink to='/contact' activeClassName='app-nav-element-active'>Contact</NavLink>
                     </div>
                     <div className='app-nav-langs'>
                         <span>ES</span> / <span>EN</span>
