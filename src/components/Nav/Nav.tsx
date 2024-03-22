@@ -1,3 +1,4 @@
+import { useLang } from '../../context/lang'
 import { useTheme } from '../../context/theme'
 import useNav from '../../hooks/useNav'
 import { GithubIcon, LinkedInIcon, MoonlightIcon, SunlightIcon } from '../Icons/Icons'
@@ -7,6 +8,7 @@ import './Nav.css'
 export default function Nav() {
     const { isOpen, Icon, openMenu, closeMenu } = useNav()
     const { toggleTheme, isDark } = useTheme()
+    const { isSpanish, isEnglish, toEnglish, toSpanish } = useLang()
 
     const handleIconClick = () => {
         if (isOpen) {
@@ -32,7 +34,19 @@ export default function Nav() {
                         <NavLink to='/contact' activeClassName='app-nav-element-active'>Contact</NavLink>
                     </div>
                     <div className='app-nav-langs'>
-                        <span>ES</span> / <span>EN</span>
+                        <span
+                            className={isSpanish() ? 'app-nav-lang-active' : ''}
+                            onClick={toSpanish}
+                        >
+                            ES
+                        </span>
+                        /
+                        <span
+                            className={isEnglish() ? 'app-nav-lang-active' : ''}
+                            onClick={toEnglish}
+                        >
+                            EN
+                        </span>
                     </div>
                     <div className='app-nav-social-icons'>
                         <span><GithubIcon /></span>

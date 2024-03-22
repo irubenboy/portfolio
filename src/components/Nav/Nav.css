@@ -29,6 +29,14 @@
     text-align: center;
 }
 
+.app-nav-langs span {
+    cursor: pointer;
+}
+
+.app-nav-lang-active {
+    color: var(--primary-color);
+}
+
 .app-nav-menu {
     display: none;
     gap: 3rem;
@@ -76,6 +84,7 @@
     border-radius: 50%;
     background-color: var(--primary-color);
 }
+
 
 
 
