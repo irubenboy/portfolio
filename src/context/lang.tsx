@@ -1,9 +1,8 @@
-import { type ReactNode, createContext, useContext, useState } from 'react'
+import { type ReactNode, createContext, useContext, useEffect } from 'react'
 import { getLangStorage, setLangStorage } from '../storage/lang'
+import { useTranslation } from 'react-i18next'
 
-export type LangType = 'en' | 'es'
-
-const Languages: Record<string, LangType> = {
+const Languages = {
     EN: 'en',
     ES: 'es'
 }
@@ -13,7 +12,7 @@ interface LangContextType {
     toSpanish: () => void
     isSpanish: () => boolean
     isEnglish: () => boolean
-    lang: LangType
+    lang: string
 }
 
 const initial: LangContextType = {
@@ -26,27 +25,31 @@ const initial: LangContextType = {
 const LangContext = createContext(initial)
 
 export function LangProvider({ children }: { children: ReactNode }) {
-    const [lang, setLang] = useState<LangType>(() => {
-        return getLangStorage()
-    })
+    useEffect(() => {
+        i18n.changeLanguage(getLangStorage()).then(() => { }).catch(console.log)
+    }, [])
+
+    const { i18n } = useTranslation()
 
     const toEnglish = () => {
-        setLang(Languages.EN)
-        setLangStorage(Languages.EN)
+        i18n.changeLanguage(Languages.EN)
+            .then(() => { setLangStorage(Languages.EN) })
+            .catch(console.log)
     }
 
     const toSpanish = () => {
-        setLang(Languages.ES)
-        setLangStorage(Languages.ES)
+        i18n.changeLanguage(Languages.ES)
+            .then(() => { setLangStorage(Languages.ES) })
+            .catch(console.log)
     }
 
-    const isSpanish = () => lang === Languages.ES
+    const isSpanish = () => i18n.language === Languages.ES
 
-    const isEnglish = () => lang === Languages.EN
+    const isEnglish = () => i18n.language === Languages.EN
 
     return (
         <LangContext.Provider value={{
-            lang,
+            lang: i18n.language,
             toEnglish,
             toSpanish,
             isSpanish,

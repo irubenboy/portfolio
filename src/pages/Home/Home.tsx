@@ -1,25 +1,28 @@
 import { ReactTyped } from 'react-typed'
 import './Home.css'
+import { useTranslation } from 'react-i18next'
 
 export default function HomePage() {
+    const { t } = useTranslation()
+
     return (
         <>
             <section className='app-cover'>
                 <article className='app-info'>
-                    <h5 className='app-data--color'>Hey 👋🏻, my name is</h5>
-                    <h1 className='app-data-name'>Rubén</h1>
+                    <h5 className='app-data--color'>{t('welcome')}</h5>
+                    <h1 className='app-data-name'>{t('name')}</h1>
                     <h2 className='app-data'>
                         <span className='app-data--color'>
-                            and I&apos;m
+                            {t('amI')}
                         </span>{' '}
                         <ReactTyped
-                            strings={['Full Stack Development', 'Backend development', 'Frontend Developer']}
+                            strings={[t('fullStack'), t('backend'), t('frontend')]}
                             typeSpeed={500}
                             backSpeed={200}
                             loop
                         />
                     </h2>
-                    <p className='app-data--secondary'>I am passionate about programming, I love learning and having challenges that help me grow as professional</p>
+                    <p className='app-data--secondary'>{t('subtitle')}</p>
                 </article>
                 <div className='app-image'>
                     <img src='/images/image.jpeg' />

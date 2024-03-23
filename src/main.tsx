@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import App from './components/App/App.tsx'
 import { BrowserRouter } from 'react-router-dom'
+import './lang/i18n.ts'
 
 const root: Element = document.getElementById('root') ?? document.getElementsByTagName('body')[0]
 

@@ -1,15 +1,10 @@
-import { type LangType } from '../context/lang'
-
 const LANG = 'LANG-STORAGE'
 
-const EN = 'en'
-const ES = 'es'
-
-export function getLangStorage(): LangType {
-    return localStorage.getItem(LANG) === ES ? ES : EN
+export function getLangStorage() {
+    return localStorage.getItem(LANG) ?? 'en'
 }
 
-export function setLangStorage(lang: LangType) {
+export function setLangStorage(lang: string) {
     localStorage.setItem(LANG, lang)
 }
 

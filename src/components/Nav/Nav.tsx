@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'
 import { useLang } from '../../context/lang'
 import { useTheme } from '../../context/theme'
 import useNav from '../../hooks/useNav'
@@ -9,6 +10,7 @@ export default function Nav() {
     const { isOpen, Icon, openMenu, closeMenu } = useNav()
     const { toggleTheme, isDark } = useTheme()
     const { isSpanish, isEnglish, toEnglish, toSpanish } = useLang()
+    const { t } = useTranslation()
 
     const handleIconClick = () => {
         if (isOpen) {
@@ -18,6 +20,7 @@ export default function Nav() {
 
         openMenu()
     }
+
     return (
         <header className='app-header'>
             <div className={`container ${isOpen ? 'app-nav-active' : ''}`}>
@@ -27,11 +30,11 @@ export default function Nav() {
                     </div>
 
                     <div className='app-nav-menu'>
-                        <NavLink to='/' activeClassName='app-nav-element-active'>Home</NavLink>
-                        <NavLink to='/about' activeClassName='app-nav-element-active'>About me</NavLink>
-                        <NavLink to='/skills' activeClassName='app-nav-element-active'>Skills</NavLink>
-                        <NavLink to='/projects' activeClassName='app-nav-element-active'>Projects</NavLink>
-                        <NavLink to='/contact' activeClassName='app-nav-element-active'>Contact</NavLink>
+                        <NavLink to='/' activeClassName='app-nav-element-active'>{t('home')}</NavLink>
+                        <NavLink to='/about' activeClassName='app-nav-element-active'>{t('about')}</NavLink>
+                        <NavLink to='/skills' activeClassName='app-nav-element-active'>{t('skills')}</NavLink>
+                        <NavLink to='/projects' activeClassName='app-nav-element-active'>{t('projects')}</NavLink>
+                        <NavLink to='/contact' activeClassName='app-nav-element-active'>{t('contact')}</NavLink>
                     </div>
                     <div className='app-nav-langs'>
                         <span
@@ -61,7 +64,7 @@ export default function Nav() {
                     </div>
                     <span onClick={handleIconClick} className='app-nav-btn-icon'><Icon /></span>
                 </nav>
-            </div>
-        </header>
+            </div >
+        </header >
     )
 }
