@@ -16,7 +16,7 @@ export default function HomePage() {
                             {t('amI')}
                         </span>{' '}
                         <ReactTyped
-                            strings={[t('fullStack'), t('backend'), t('frontend')]}
+                            strings={[t('fullStack'), t('backend'), t('frontend'), t('database')]}
                             typeSpeed={500}
                             backSpeed={200}
                             loop
@@ -25,7 +25,7 @@ export default function HomePage() {
                     <p className='app-data--secondary'>{t('subtitle')}</p>
                 </article>
                 <div className='app-image'>
-                    <img src='/images/image.jpeg' />
+                    <img src='/images/image.jpg' />
                 </div>
             </section>
         </>

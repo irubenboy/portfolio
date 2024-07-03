@@ -1,7 +1,12 @@
 import { useTranslation } from 'react-i18next'
 import './About.css'
+import { useEffect } from 'react'
 export default function AboutPage() {
     const { t } = useTranslation()
+
+    useEffect(() => {
+        document.title = t('about')
+    }, [])
     return (
         <section className='about-section'>
             <aside className='about-image'>
@@ -14,14 +19,14 @@ export default function AboutPage() {
                     </span> {' '}
                     {t('about').substring(t('about').indexOf(' ') + 1)}</h1>
                 <p className='about-info-paragraph'>
-                    {t('text1')}
+                    {t('aboutMeText1')}
                 </p>
                 <p className='about-info-paragraph'>
-                    {t('text2')}
+                    {t('aboutMeText2')}
                 </p>
 
                 <p className='about-info-paragraph'>
-                    {t('text3')}
+                    {t('aboutMeText3')}
                 </p>
             </aside>
         </section>

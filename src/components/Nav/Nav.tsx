@@ -5,6 +5,7 @@ import useNav from '../../hooks/useNav'
 import { GithubIcon, LinkedInIcon, MoonlightIcon, SunlightIcon } from '../Icons/Icons'
 import NavLink from '../NavLink/NavLink'
 import './Nav.css'
+import { Link } from 'react-router-dom'
 
 export default function Nav() {
     const { isOpen, Icon, openMenu, closeMenu } = useNav()
@@ -52,8 +53,8 @@ export default function Nav() {
                         </span>
                     </div>
                     <div className='app-nav-social-icons'>
-                        <span><GithubIcon /></span>
-                        <span><LinkedInIcon /></span>
+                        <a href='https://github.com/irubenboy' target='_blank' rel='noreferrer'><GithubIcon /></a>
+                        <a href='https://www.linkedin.com/in/ruben-moreno-50b779199/' target='_blank' rel='noreferrer'><LinkedInIcon /></a>
                         <span onClick={toggleTheme}>
                             {
                                 isDark
