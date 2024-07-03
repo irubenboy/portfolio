@@ -28,6 +28,7 @@ body {
     font-family: Poppins;
     color: var(--letter-color);
     background-color: var(--background);
+    overflow-x: hidden;
 }
 
 h1 {

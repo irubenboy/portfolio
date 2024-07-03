@@ -1,5 +1,5 @@
 import ProgressSkill from '../../components/ProgressSkill/ProgressSkill'
-import useSkills from '../../hooks/skills'
+import useSkills from '../../hooks/useSkills'
 import './Skill.css'
 
 export default function Skills() {

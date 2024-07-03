@@ -1,0 +1,76 @@
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 75%;
+    padding: 4px 8px;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.project-container{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+    gap: 4px;
+    border-radius: 5px;
+    border: 8px grey solid;
+    background-color: var(--primary);
+    background: linear-gradient(180deg, rgba(171,0,255,1) 0%, rgba(232,209,241,1) 50%, rgba(220,112,255,1) 100%);
+}
+
+.project-image{
+    width: 90%;
+    height: 225px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.project-image--contain{
+    background-size: contain;
+}
+
+.project-info{
+    width: 90%;
+    text-align: justify;
+}
+
+.project-info h4{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.project-info p{
+    height: 130px;
+    overflow: overlay;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.project-info p::-webkit-scrollbar {
+    display: none;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.project-languages{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-logo-container{
+    max-width: 35px;
+}

@@ -1,3 +1,5 @@
+import { type Skill } from '../../types/types'
+
 export default function ProgressSkill({ title, percent, logo }: Skill) {
     return (
         <div className='skill'>
@@ -17,10 +19,4 @@ export default function ProgressSkill({ title, percent, logo }: Skill) {
             </div>
         </div>
     )
-}
-
-interface Skill {
-    title: string
-    percent: number
-    logo: string
 }
