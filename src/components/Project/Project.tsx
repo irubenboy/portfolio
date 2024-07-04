@@ -35,4 +35,4 @@ export default function ProjectCard({ title, description, image = '', link = '',
     )
 }
 
-type ProjectCardPropsType = Pick<Project, 'title' | 'description' | 'image' | 'link'> & { languages: Skill[] }
+type ProjectCardPropsType = Pick<Project, 'title' | 'image' | 'link'> & { languages: Skill[], description: string }

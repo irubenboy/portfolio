@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 
 export default function Projects() {
     const { projects, toImages } = useProjects()
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
 
     useEffect(() => {
         document.title = t('projects')
@@ -20,7 +20,7 @@ export default function Projects() {
                         key={id}
                         title={title}
                         image={image}
-                        description={description}
+                        description={description[i18n.language] ?? '' }
                         link={link}
                         languages={toImages(languages)}
                     />

@@ -6,7 +6,7 @@ export interface Skill {
 
 export interface Project {
     title: string
-    description: string
+    description: Record<string, string>
     image?: string
     link?: string
     languages: string[]

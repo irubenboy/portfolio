@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import './About.css'
 import { useEffect } from 'react'
+import { DownloadIcon } from '../../components/Icons/Icons'
 export default function AboutPage() {
     const { t } = useTranslation()
 
@@ -28,6 +29,10 @@ export default function AboutPage() {
                 <p className='about-info-paragraph'>
                     {t('aboutMeText3')}
                 </p>
+                <a href='https://drive.google.com/file/d/1V2B_ZHxf_hV6ivbLhEd2tPQ3iNS9a6mQ/view?usp=sharing' target='_blank' rel='noreferrer' className='about-button-cv'>
+                    <DownloadIcon />
+                    Download CV
+                </a>
             </aside>
         </section>
     )

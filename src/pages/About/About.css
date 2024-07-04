@@ -30,6 +30,30 @@
     text-align: justify;
 }
 
+.about-button-cv{
+    height: 50px;
+    border-radius: 4px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: transparent;
+    overflow: hidden;
+    transition: .2s all ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.about-button-cv:hover{
+    border-color: transparent;
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+    color: var(--color)
+}
+
 @media screen and (min-width: 1024px) {
     .about-section {
         flex-direction: row;

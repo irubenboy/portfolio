@@ -51,7 +51,6 @@ export default function Nav() {
                         <NavLink to='/about' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('about')}</NavLink>
                         <NavLink to='/skills' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('skills')}</NavLink>
                         <NavLink to='/projects' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('projects')}</NavLink>
-                        <NavLink to='/contact' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('contact')}</NavLink>
                     </div>
                     <div className='app-nav-langs'>
                         <span
