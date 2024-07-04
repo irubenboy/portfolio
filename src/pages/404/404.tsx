@@ -1,8 +1,13 @@
 import { useTranslation } from 'react-i18next'
 import './404.css'
+import { useEffect } from 'react'
 
 export default function NotFound404Page() {
     const { t } = useTranslation()
+
+    useEffect(() => {
+        document.title = t('notFoundPage')
+    }, [t])
 
     return (
         <section className='not-found-section'>

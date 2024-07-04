@@ -1,6 +1,6 @@
 .skills-container{
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
     width: 75%;
     background-color: var(--color);
     border-radius: 8px;
@@ -39,7 +39,7 @@
 
 .skill-progress{
     width: 100%;
-    background-color: grey;
+    background-color: var(--progress-bar-bg);
     border-radius: 50px;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .skill-bar-animation{
-    background-color: purple;
+    background-color: var(--primary-color);
     animation: progressBar 3s ease-in-out;
     animation-fill-mode: both; 
     border-radius: inherit;
@@ -139,4 +139,11 @@
 @keyframes progressBar {
   0% { width: 0; }
   100% { width: 100%; }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .skills-container{
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
 }

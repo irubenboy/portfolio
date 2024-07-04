@@ -6,7 +6,7 @@ export default function AboutPage() {
 
     useEffect(() => {
         document.title = t('about')
-    }, [])
+    }, [t])
     return (
         <section className='about-section'>
             <aside className='about-image'>

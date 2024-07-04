@@ -31,7 +31,8 @@ await i18n
                     subtitle: 'I am passionate about programming, I love learning and having challenges that help me grow as professional',
                     name: 'Rubén',
                     notFound: 'The page you were looking for does\'t exist.',
-                    goBack: 'Go back, or head over to URL to choose a new direction'
+                    goBack: 'Go back, or head over to URL to choose a new direction',
+                    notFoundPage: 'Error 404 - Not Found'
                 }
             },
             es: {

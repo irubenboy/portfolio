@@ -6,6 +6,7 @@
     --letter-color: black;
     --primary-color: #ad21ff;
     --grey: grey;
+    --progress-bar-bg: #c3c3c3;
 }
 
 .dark-mode {
@@ -13,6 +14,7 @@
     --letter-color: white;
     --background: black;
     --primary-color: #5a1681;
+    --progress-bar-bg: white;
 }
 
 html {

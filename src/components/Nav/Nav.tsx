@@ -5,15 +5,31 @@ import useNav from '../../hooks/useNav'
 import { GithubIcon, LinkedInIcon, MoonlightIcon, SunlightIcon } from '../Icons/Icons'
 import NavLink from '../NavLink/NavLink'
 import './Nav.css'
-import { Link } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Nav() {
     const { isOpen, Icon, openMenu, closeMenu } = useNav()
     const { toggleTheme, isDark } = useTheme()
     const { isSpanish, isEnglish, toEnglish, toSpanish } = useLang()
     const { t } = useTranslation()
+    const closeButtonRef = useRef<HTMLElement>(null)
+    const [isLarge, setLarge] = useState(() => {
+        return window.innerWidth >= 1024
+    })
+
+    useEffect(() => {
+        const handleResize = () => {
+            setLarge(window.innerWidth >= 1024)
+        }
+
+        addEventListener('resize', handleResize)
+
+        return () => { removeEventListener('resize', handleResize) }
+    }, [])
 
     const handleIconClick = () => {
+        if (isLarge) return
+
         if (isOpen) {
             closeMenu()
             return
@@ -31,11 +47,11 @@ export default function Nav() {
                     </div>
 
                     <div className='app-nav-menu'>
-                        <NavLink to='/' activeClassName='app-nav-element-active'>{t('home')}</NavLink>
-                        <NavLink to='/about' activeClassName='app-nav-element-active'>{t('about')}</NavLink>
-                        <NavLink to='/skills' activeClassName='app-nav-element-active'>{t('skills')}</NavLink>
-                        <NavLink to='/projects' activeClassName='app-nav-element-active'>{t('projects')}</NavLink>
-                        <NavLink to='/contact' activeClassName='app-nav-element-active'>{t('contact')}</NavLink>
+                        <NavLink to='/' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('home')}</NavLink>
+                        <NavLink to='/about' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('about')}</NavLink>
+                        <NavLink to='/skills' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('skills')}</NavLink>
+                        <NavLink to='/projects' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('projects')}</NavLink>
+                        <NavLink to='/contact' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('contact')}</NavLink>
                     </div>
                     <div className='app-nav-langs'>
                         <span
@@ -63,7 +79,7 @@ export default function Nav() {
                             }
                         </span>
                     </div>
-                    <span onClick={handleIconClick} className='app-nav-btn-icon'><Icon /></span>
+                    <span onClick={handleIconClick} className='app-nav-btn-icon' ref={closeButtonRef}><Icon /></span>
                 </nav>
             </div >
         </header >

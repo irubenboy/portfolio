@@ -1,9 +1,14 @@
 import { ReactTyped } from 'react-typed'
 import './Home.css'
 import { useTranslation } from 'react-i18next'
+import { useEffect } from 'react'
 
 export default function HomePage() {
     const { t } = useTranslation()
+
+    useEffect(() => {
+        document.title = t('home')
+    }, [t])
 
     return (
         <>
