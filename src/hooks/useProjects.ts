@@ -1,7 +1,8 @@
+import { type Project } from '../types/types'
 import useSkills from './useSkills'
 
 export default function useProjects() {
-    const projects = [
+    const projects: Project[] = [
         {
             id: 1,
             title: 'My Java Common Library',

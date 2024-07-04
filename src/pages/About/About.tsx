@@ -29,7 +29,7 @@ export default function AboutPage() {
                 <p className='about-info-paragraph'>
                     {t('aboutMeText3')}
                 </p>
-                <a href='https://drive.google.com/file/d/1V2B_ZHxf_hV6ivbLhEd2tPQ3iNS9a6mQ/view?usp=sharing' target='_blank' rel='noreferrer' className='about-button-cv'>
+                <a href='https://drive.google.com/file/d/1TCwG4TNJUV4CSmNMAyOox2AX4Ik0a0Jk/view?usp=sharing' target='_blank' rel='noreferrer' className='about-button-cv'>
                     <DownloadIcon />
                     Download CV
                 </a>

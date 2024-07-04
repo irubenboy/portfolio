@@ -5,6 +5,7 @@ export interface Skill {
 }
 
 export interface Project {
+    id: number
     title: string
     description: Record<string, string>
     image?: string

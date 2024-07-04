@@ -20,7 +20,7 @@ export default function Projects() {
                         key={id}
                         title={title}
                         image={image}
-                        description={description[i18n.language] ?? '' }
+                        description={description[i18n.language]}
                         link={link}
                         languages={toImages(languages)}
                     />
