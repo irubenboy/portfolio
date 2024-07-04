@@ -8,23 +8,23 @@ import Projects from '../pages/Projects/Projects'
 export default function Routes() {
     return (
         <ReactRoutes>
-            <Route path='/' element={
+            <Route path='/portfolio' element={
                 <HomePage />
             }
             />
-            <Route path='/about' element={
+            <Route path='/portfolio/about' element={
                 <AboutPage />
             }
             />
-            <Route path='/skills' element={
+            <Route path='/portfolio/skills' element={
                 <Skills />
             }
             />
-            <Route path='/projects' element={
+            <Route path='/portfolio/projects' element={
                 <Projects />
             }
             />
-            <Route path='/*' element={
+            <Route path='/portfolio/*' element={
                 <NotFound404Page />
             }
             />
