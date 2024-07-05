@@ -11,7 +11,7 @@ export default function AboutPage() {
     return (
         <section className='about-section'>
             <aside className='about-image'>
-                <img src='/images/me.jpg' alt='This is me' />
+                <img src='/portfolio/images/me.jpg' alt='This is me' />
             </aside>
             <aside className='about-info'>
                 <h1 className='about-info-title'>

@@ -4,7 +4,9 @@ export default function NavLink({ children, to, activeClassName, className, ...p
     const handleClassName = ({ isActive }: { isActive: boolean }) => {
         const list = [className]
 
-        if (isActive) list.push(activeClassName)
+        const currentPath = window.location.pathname
+
+        if (isActive && currentPath === to) list.push(activeClassName)
 
         return list.join(' ')
     }

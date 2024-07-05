@@ -13,6 +13,16 @@ export default function useProjects() {
             image: '',
             link: 'https://github.com/irubenboy/common',
             languages: ['Java']
+        },
+        {
+            id: 2,
+            title: 'Portfolio',
+            description: {
+                en: `Portfolio web with the best projects`,
+                es: `Portfolio web con los mejores proyectos`
+            },
+            languages: ['HTML', 'CSS', 'Javascript', 'React'],
+            image: '/portfolio/images/portfolio.png'
         }
     ]
     const { skills } = useSkills()

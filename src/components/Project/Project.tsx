@@ -4,7 +4,7 @@ export default function ProjectCard({ title, description, image = '', link = '',
     return (
         <div className='project-container'>
             {
-                <div className={`project-image ${image.length === 0 && 'project-image--contain'}`} style={{ backgroundImage: `url(${image.length === 0 ? '/images/profile.png' : image})` }}>
+                <div className={`project-image ${image.length === 0 && 'project-image--contain'}`} style={{ backgroundImage: `url(${image.length === 0 ? '/portfolio/images/profile.png' : image})` }}>
                 </div>
             }
             <div className='project-info'>
@@ -26,7 +26,7 @@ export default function ProjectCard({ title, description, image = '', link = '',
                 <div className='links'>
                     <div className='project-logo-container'>
                         <a href={link} target='_blank' rel='noreferrer'>
-                            <img alt='Github logo' src='/images/git.png'/>
+                            <img alt='Github logo' src='/portfolio/images/git.png'/>
                         </a>
                     </div>
                 </div>

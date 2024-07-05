@@ -30,7 +30,7 @@ export default function HomePage() {
                     <p className='app-data--secondary'>{t('subtitle')}</p>
                 </article>
                 <div className='app-image'>
-                    <img src='/images/image.jpg' />
+                    <img src='/portfolio/images/image.jpg' />
                 </div>
             </section>
         </>

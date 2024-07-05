@@ -43,14 +43,14 @@ export default function Nav() {
             <div className={`container ${isOpen ? 'app-nav-active' : ''}`}>
                 <nav className='app-nav'>
                     <div className='app-nav-profile'>
-                        <img src='/images/profile.png' />
+                        <img src='/portfolio/images/profile.png' />
                     </div>
 
                     <div className='app-nav-menu'>
-                        <NavLink to='/' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('home')}</NavLink>
-                        <NavLink to='/about' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('about')}</NavLink>
-                        <NavLink to='/skills' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('skills')}</NavLink>
-                        <NavLink to='/projects' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('projects')}</NavLink>
+                        <NavLink to='/portfolio/' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('home')}</NavLink>
+                        <NavLink to='/portfolio/about' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('about')}</NavLink>
+                        <NavLink to='/portfolio/skills' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('skills')}</NavLink>
+                        <NavLink to='/portfolio/projects' activeClassName='app-nav-element-active' onClick={handleIconClick}>{t('projects')}</NavLink>
                     </div>
                     <div className='app-nav-langs'>
                         <span
