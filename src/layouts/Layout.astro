@@ -46,9 +46,14 @@ const { title, description } = Astro.props;
 		align-items: center
 	}
 
+	html.dark body{
+		background-color: rgba(57, 68, 93, 0.9);
+	}
 	 @media (prefers-reduced-motion: reduce) {
 		html {
 			scroll-behavior: auto;
 		}
 	}
+
+
 </style>
