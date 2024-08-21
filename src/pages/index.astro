@@ -1,7 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
+
+import Section from '@/components/Section.astro'
+import Hero from '@/components/Hero.astro'
 ---
 
-<Layout title="" description=''>
-	
+<Layout title='Portfolio irudev - Web development and programmer with +3 years of experience' description='Portfolio irudev - Web development and programmer with +3 years of experience'>
+	<main class="px-4 bg-red-200">
+        <Section class="bg-teal-400 py-6 md:py-36">
+            <Hero />
+        </Section>
+    </main>
 </Layout>
