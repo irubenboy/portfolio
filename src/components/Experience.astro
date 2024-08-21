@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'At the moment...',
+        title: 'Computer Technician',
+        company: 'Irium Soluciones y Sistemas, SI',
+        description: 'Computer maintenance involves configuring programs and components, as well as installing and configuring operating systems. It also includes using tools like Clonezilla to clone and restore operating systems on devices. Office automation is essential, along with managing relationships with suppliers to ensure an efficient supply of resources and technological services.',
+        link: 'https://www.irium.es/'
+    },
+    {
+        date: 'MAR 22 - JUN 22',
+        title: 'ICT application developer',
+        company: 'Bootpret',
+        description: 'Develep apps as Timer and Organizer shift app'
+    }
+]
+---
+
+<ol class="relative mt-16">
+    {
+        EXPERIENCE.map(experience => (
+            <li>
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }
+</ol>
