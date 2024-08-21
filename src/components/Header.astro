@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from '@/components/ThemeToggle.astro'
+
 const items = [
     {
         title: 'Experience',
@@ -24,11 +26,12 @@ const items = [
 ---
 
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mt-2">
-    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 justify-center items-center">
+    <nav class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center">
         {
             items.map(item => (
-                <a class="relative block px-2 py-2 transition hover:text-purple-500" href={item.url} aria-label={item.label}>{item.title}</a>
+                <a class="relative block px-2 py-2 transition hover:text-purple-500 dark:hover:text-purple-400" href={item.url} aria-label={item.label}>{item.title}</a>
             ))
         }
+        <ThemeToggle />
     </nav>
 </header>
