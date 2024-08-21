@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
+import ProfileCheckIcon from '@/icons/ProfileCheck.astro'
+import CodeIcon from '@/icons/Code.astro'
+
 import Section from '@/components/Section.astro'
 import SectionTitle from '@/components/SectionTitle.astro'
+
 import Hero from '@/components/Hero.astro'
-import ProfileCheckIcon from '@/icons/ProfileCheck.astro'
 import Experience from '@/components/Experience.astro'
+import Projects from '@/components/Projects.astro'
 ---
 
 <Layout title='Portfolio irudev - Web development and programmer with +3 years of experience' description='Portfolio irudev - Web development and programmer with +3 years of experience'>
@@ -21,6 +25,14 @@ import Experience from '@/components/Experience.astro'
                     Laboral experience
                 </SectionTitle>
                 <Experience />
+            </Section>
+
+            <Section id="projects" class="bg-sky-500">
+                <SectionTitle>
+                    <CodeIcon class="size-8" />
+                    Projects
+                </SectionTitle>
+                <Projects />
             </Section>
         </div>
     </main>
