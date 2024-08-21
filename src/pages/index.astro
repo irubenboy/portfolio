@@ -2,7 +2,9 @@
 import Layout from '../layouts/Layout.astro'
 
 import Section from '@/components/Section.astro'
+import SectionTitle from '@/components/SectionTitle.astro'
 import Hero from '@/components/Hero.astro'
+import ProfileCheckIcon from '@/icons/ProfileCheck.astro'
 ---
 
 <Layout title='Portfolio irudev - Web development and programmer with +3 years of experience' description='Portfolio irudev - Web development and programmer with +3 years of experience'>
@@ -10,5 +12,14 @@ import Hero from '@/components/Hero.astro'
         <Section class="bg-teal-400 py-6 md:py-36">
             <Hero />
         </Section>
+
+        <div class="space-y-24">
+            <Section id="experience" class="bg-teal-600">
+                <SectionTitle>
+                    <ProfileCheckIcon class="size-8" />
+                    Laboral experience
+                </SectionTitle>
+            </Section>
+        </div>
     </main>
 </Layout>
