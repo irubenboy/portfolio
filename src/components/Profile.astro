@@ -1,7 +1,15 @@
+---
+import Badge, { STATUS } from '@/components/Badge.astro'
+
+const status = STATUS.AVAILABLE
+---
 <div class="flex gap-4 mb-4">
     <img
-        class="rounded-full shadow-md shadow-purple-300 size-16 bg-purple-400 dark:shadow-purple-700 dark:bg-purple-900"
+        class="rounded-full shadow-md size-16 bg-purple-400 dark:bg-purple-900"
         src="/images/profile/profile.png"
         alt="irudev's profile"
     />
+    <a href="https://linkedin.com/in/ruben-moreno-narbona" target="_blank" rel="noopener" class="flex items-center position md:justify-center md:hover-scale-105">
+        <Badge status={status} />
+    </a>
 </div>
