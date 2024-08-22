@@ -1,6 +1,7 @@
 ---
 import GithubIcon from '@/icons/Github.astro';
 import LinkIcon from '@/icons/Link.astro';
+import LinkButton from './LinkButton.astro';
 
 interface Props{
     title: string;
@@ -47,19 +48,19 @@ const {title, description, link, github, image, tags} = Astro.props
             <footer class="flex items-end justify-start mt-4 gap-x-4">
                 {
                     github && (
-                        <a href={github}>
+                        <LinkButton href={github}>
                             <GithubIcon class="size-6"/>
                             Code
-                        </a>
+                        </LinkButton>
                     )
                 }
 
                 {
                     link && (
-                        <a href={github}>
+                        <LinkButton href={github}>
                             <LinkIcon class="size-6"/>
                             Preview
-                        </a>
+                        </LinkButton>
                     )
                 }
             </footer>
