@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 
 import ProfileCheckIcon from '@/icons/ProfileCheck.astro'
 import CodeIcon from '@/icons/Code.astro'
+import BriefCaseIcon from '@/icons/BriefCase.astro'
 
 import Section from '@/components/Section.astro'
 import SectionTitle from '@/components/SectionTitle.astro'
@@ -10,6 +11,7 @@ import SectionTitle from '@/components/SectionTitle.astro'
 import Hero from '@/components/Hero.astro'
 import Experience from '@/components/Experience.astro'
 import Projects from '@/components/Projects.astro'
+import AboutMe from '@/components/AboutMe.astro'
 ---
 
 <Layout title='Portfolio irudev - Web development and programmer with +3 years of experience' description='Portfolio irudev - Web development and programmer with +3 years of experience'>
@@ -21,7 +23,7 @@ import Projects from '@/components/Projects.astro'
         <div class="space-y-24">
             <Section id="experience" class="bg-teal-600">
                 <SectionTitle>
-                    <ProfileCheckIcon class="size-8" />
+                    <BriefCaseIcon class="size-8" />
                     Laboral experience
                 </SectionTitle>
                 <Experience />
@@ -33,6 +35,13 @@ import Projects from '@/components/Projects.astro'
                     Projects
                 </SectionTitle>
                 <Projects />
+            </Section>
+            <Section id="about-me" class="bg-green-600">
+                <SectionTitle>
+                    <ProfileCheckIcon />
+                    About me
+                </SectionTitle>
+                <AboutMe />
             </Section>
         </div>
     </main>
