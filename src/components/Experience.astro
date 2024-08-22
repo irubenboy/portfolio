@@ -1,19 +1,23 @@
 ---
+import { getI18N } from "@/i18n"
 import ExperienceItem from "./ExperienceItem.astro"
+
+const {currentLocale} = Astro
+const locale = getI18N({currentLocale})
 
 const EXPERIENCE = [
     {
-        date: 'At the moment...',
-        title: 'Computer Technician',
-        company: 'Irium Soluciones y Sistemas, SI',
-        description: 'Computer maintenance involves configuring programs and components, as well as installing and configuring operating systems. It also includes using tools like Clonezilla to clone and restore operating systems on devices. Office automation is essential, along with managing relationships with suppliers to ensure an efficient supply of resources and technological services.',
+        date: locale.AT_THE_MOMENT_DATE ?? '',
+        title: locale.COMPUTER_TECHNICIAN ?? '',
+        company: 'Irium Soluciones Y Sistemas, S.I.',
+        description: locale.COMPUTER_TECHNICIAN_DESCRIPTION ?? '',
         link: 'https://www.irium.es/'
     },
     {
         date: 'MAR 22 - JUN 22',
-        title: 'ICT application developer',
+        title: locale.ICT_APPLICATION_DEVELOPER ?? '',
         company: 'Bootpret',
-        description: 'Develep apps as Timer and Organizer shift app'
+        description: locale.COMPUTER_TECHNICIAN_DESCRIPTION ?? ''
     }
 ]
 ---

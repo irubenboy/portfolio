@@ -4,23 +4,24 @@ import LinkedinIcon from "@/icons/Linkedin.astro"
 
 import SocialPill from "./SocialPill.astro"
 import Profile from "./Profile.astro"
+import { getI18N } from "@/i18n"
+
+
+const {currentLocale} = Astro
+const locale = getI18N({currentLocale})
 ---
 
 <div class="max-w-xl">
     <Profile />
     <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
-        Hey, I'm irudev
+        {locale.SEO_TITLE}
     </h1>
-    <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-purple-200 [&>strong]:text-purple-500 [&>strong]:font-semibold dark:text-gray-300">
-        +3 years of expererience.
-        <strong>Web developer and app programmer.</strong>
-        from Cádiz, España 🇪🇸. I'm specialized in web and mobile application development.
-    </p>
+    <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-purple-200 [&>strong]:text-purple-500 [&>strong]:font-semibold dark:text-gray-300" set:html={locale.SEO_DESCRIPTION}></p>
 
     <nav class="flex flex-wrap gap-4 mt-8">
         <SocialPill href="mailto:ruben.moreno.narbona.96@gmail.com">
             <MailIcon class="size-4" />
-            Contact me
+            {locale.CONTACT_ME}
         </SocialPill>
 
         <SocialPill href="https://www.linkedin.com/in/ruben-moreno-narbona-50b779199/">

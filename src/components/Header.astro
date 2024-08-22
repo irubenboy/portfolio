@@ -1,24 +1,28 @@
 ---
 import ThemeToggle from '@/components/ThemeToggle.astro'
+import { getI18N } from '@/i18n'
+
+const {currentLocale} = Astro
+const locale = getI18N({currentLocale})
 
 const items = [
     {
-        title: 'Experience',
+        title: locale.EXPERIENCE_TITLE,
         label: 'experience',
         url: '/#experience'
     },
     {
-        title: 'Projects',
+        title: locale.PROJECTS_TITLE,
         label: 'projects',
         url: '/#projects'
     },
     {
-        title: 'About me',
+        title: locale.ABOUT_ME_TITLE,
         label: 'about-me',
         url: '/#about-me'
     }, 
     {
-        title: 'Contact',
+        title: locale.CONTACT_TITLE,
         label: 'contact',
         url: '/#contact'
     }

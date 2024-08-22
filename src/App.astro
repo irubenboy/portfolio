@@ -1,0 +1,48 @@
+---
+import Layout from '@/layouts/Layout.astro'
+
+import ProfileCheckIcon from '@/icons/ProfileCheck.astro'
+import CodeIcon from '@/icons/Code.astro'
+import BriefCaseIcon from '@/icons/BriefCase.astro'
+
+import Section from '@/components/Section.astro'
+import SectionTitle from '@/components/SectionTitle.astro'
+
+import Hero from '@/components/Hero.astro'
+import Experience from '@/components/Experience.astro'
+import Projects from '@/components/Projects.astro'
+import AboutMe from '@/components/AboutMe.astro'
+---
+
+<Layout title='Portfolio irudev - Web development and programmer with +3 years of experience' description='Portfolio irudev - Web development and programmer with +3 years of experience'>
+	<main class="px-4">
+        <Section class="py-16 md:py-36">
+            <Hero />
+        </Section>
+
+        <div class="space-y-24">
+            <Section id="experience">
+                <SectionTitle>
+                    <BriefCaseIcon class="size-8" />
+                    Laboral experience
+                </SectionTitle>
+                <Experience />
+            </Section>
+
+            <Section id="projects">
+                <SectionTitle>
+                    <CodeIcon class="size-8" />
+                    Projects
+                </SectionTitle>
+                <Projects />
+            </Section>
+            <Section id="about-me">
+                <SectionTitle>
+                    <ProfileCheckIcon />
+                    About me
+                </SectionTitle>
+                <AboutMe />
+            </Section>
+        </div>
+    </main>
+</Layout>

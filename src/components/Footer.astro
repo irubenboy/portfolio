@@ -5,15 +5,19 @@ import MailIcon from "@/icons/Mail.astro"
 import InstagramIcon from "@/icons/Instagram.astro"
 import TwitterIcon from "@/icons/Twitter.astro"
 import CodePenIcon from "@/icons/CodePen.astro"
+import { getI18N } from "@/i18n"
 
 const currentYear = new Date().getFullYear()
+
+const {currentLocale} = Astro
+const locale = getI18N({currentLocale})
 ---
 
 <footer class="opacity-80 m-4 mt-16 w-full container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center">
     <div class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4 text-zinc-800/90 dark:text-zinc-200/90">
         <span class="text-sm sm:text-center ">
             © {currentYear}
-            irudev. All rights reserved
+            irudev. {locale.FOOTER_TEXT}
         </span>
         <ul
             id="contact"

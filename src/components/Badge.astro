@@ -1,4 +1,6 @@
 ---
+import { getI18N } from '@/i18n'
+
 interface Props{
     status: {
         text: string
@@ -8,21 +10,24 @@ interface Props{
     }
 }
 
+const {currentLocale} = Astro
+const locale = getI18N({currentLocale})
+
 export const STATUS = {
     AVAILABLE: {
-        text: 'Available for work',
+        text: locale.STATUS_AVAILABLE_TEXT,
         gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]',
         background: 'bg-green-100 dark:bg-green-900/20',
         color: 'text-green-800 dark:text-green-100/80'
     }, 
     NON_AVAILABLE: {
-        text: 'Non available',
+        text: locale.STATUS_NON_AVAILABLE_TEXT,
         gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#E55757_0%,#542121_50%,#E55757_100%)]',
         background: 'bg-red-100 dark:bg-red-900/20',
         color: 'text-red-800 dark:text-red-100/80'
     },
     PARTIAL: {
-        text: 'Working, but open to offers',
+        text: locale.STATUS_PARTIAL_TEXT,
         gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#8957E5_0%,#3D2154_50%,#8957E5_100%)]',
         background: 'bg-purple-100 dark:bg-purple-900/20',
         color: 'text-purple-800 dark:text-purple-100/80'

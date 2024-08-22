@@ -5,6 +5,10 @@ import JavaIcon from "@/icons/Java.astro"
 import AstroLogo from "@/icons/AstroLogo.astro"
 
 import ProjectItem from "@/components/ProjectItem.astro"
+import { getI18N } from "@/i18n"
+
+const {currentLocale} = Astro
+const locale = getI18N({currentLocale})
 
 const TAGS = {
   NEXT: {
@@ -31,17 +35,16 @@ const TAGS = {
 
 const PROJECTS = [
   {
-    title: 'My Java Common Library',
-    description: 'A Java library with string, maths and arrays utils. Besides, it contains class to work keyboard easily and table as output.',
+    title: locale.JAVA_COMMON_TITLE,
+    description: locale.JAVA_COMMON_DESCRIPTION,
     github: 'https://github.com/irubenboy/common',
     image: '/images/projects/common.png',
     tags: [TAGS.JAVA]
   },
   {
-    title: 'Spotify Clone With Astro',
-    description: 'Spotify Clone using Astro framework. Focused on style and user interactivity',
+    title: locale.SPOTIFY_CLONE_TITLE,
+    description: locale.SPOTIFY_CLONE_DESCRIPTION,
     github: 'https://github.com/irubenboy/spotify-clone-with-astro',
-    link: '',
     image: '/images/projects/spotify.png',
     tags: [TAGS.ASTRO]
   }
