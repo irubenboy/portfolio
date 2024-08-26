@@ -20,11 +20,13 @@
     "PROJECTS_TITLE": "Projects",
     "ABOUT_ME_TITLE": "About me",
     "CONTACT_TITLE": "Contact",
-    "CODE_BUTTON_TEXT": "Código",
-    "PREVIEW_BUTTON_TEXT": "Ver",
+    "CODE_BUTTON_TEXT": "Code",
+    "PREVIEW_BUTTON_TEXT": "Preview",
     "JAVA_COMMON_TITLE": "My Java Common Library",
     "JAVA_COMMON_DESCRIPTION": "A Java library with string, maths and arrays utils. Besides, it contains class to work keyboard easily and table as output.",
     "SPOTIFY_CLONE_TITLE": "Spotify Clone With Astro",
     "SPOTIFY_CLONE_DESCRIPTION": "Spotify Clone using Astro framework. Focused on style and user interactivity",
-    "DOWNLOAD_CV": "Download CV"
+    "DOWNLOAD_CV": "Download CV",
+    "PORTFOLIO": "Portfolio",
+    "PORTFOLIO_DESCRIPTION": "A portfolio web project to show all my projects in one place."
 }

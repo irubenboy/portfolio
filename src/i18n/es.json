@@ -20,11 +20,13 @@
     "PROJECTS_TITLE": "Proyectos",
     "ABOUT_ME_TITLE": "Sobre mí",
     "CONTACT_TITLE": "Contacto",
-    "CODE_BUTTON_TEXT": "Code",
-    "PREVIEW_BUTTON_TEXT": "Preview",
+    "CODE_BUTTON_TEXT": "Código",
+    "PREVIEW_BUTTON_TEXT": "Ver",
     "JAVA_COMMON_TITLE": "Mi librería Java Common",
     "JAVA_COMMON_DESCRIPTION": "Una librería de java con útiles de cadenas, matemáticas y vectores. Además, contiene clases para trabajar con el teclado fácilmente y mostrar una salida en forma de tabla.",
     "SPOTIFY_CLONE_TITLE": "Clon de Spotify con Astro",
     "SPOTIFY_CLONE_DESCRIPTION": "Clon de Spotify usando Astro. Centrado en el estilo y la interactividad con el usuario.",
-    "DOWNLOAD_CV": "Descargar CV"
+    "DOWNLOAD_CV": "Descargar CV",
+    "PORTFOLIO": "Porfolio",
+    "PORTFOLIO_DESCRIPTION": "Un proyecto porfolio web para mostrar todos mis proyectos en un único lugar."
 }
