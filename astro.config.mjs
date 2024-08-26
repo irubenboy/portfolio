@@ -8,5 +8,7 @@ export default defineConfig({
   i18n: {
     defaultLocale: 'en',
     locales: ['es', 'en']
-  }
+  },
+  site: 'https://irubenboy.github.io',
+  base: 'portfolio'
 });
