@@ -7,7 +7,7 @@
     "ABOUT_ME_PARAGRAPH_2": "Some of my achievements include helping my classmates who struggled the most during my time as a student. This encouraged me to continue doing so to this day, which is why <strong>I help people who are just starting</strong> out in the world of programming.",
     "ABOUT_ME_PARAGRAPH_3": "Additionally, one of my strengths is that <strong>I know how to work in a team</strong>, and I always enjoy learning, which is why I consider myself <strong>self-taught</strong>.",
     "ABOUT_ME_PARAGRAPH_4": "As for experience in programming, <strong>I have developed several projects in different languages</strong>, which you can view on this page.",
-    "STATUS_AVAILABLE_TEXT" : "Available for work",
+    "STATUS_AVAILABLE_TEXT": "Available for work",
     "STATUS_NON_AVAILABLE_TEXT": "Non available",
     "STATUS_PARTIAL_TEXT": "Working, but open to offers",
     "AT_THE_MOMENT_DATE": "At the moment...",
@@ -25,5 +25,6 @@
     "JAVA_COMMON_TITLE": "My Java Common Library",
     "JAVA_COMMON_DESCRIPTION": "A Java library with string, maths and arrays utils. Besides, it contains class to work keyboard easily and table as output.",
     "SPOTIFY_CLONE_TITLE": "Spotify Clone With Astro",
-    "SPOTIFY_CLONE_DESCRIPTION": "Spotify Clone using Astro framework. Focused on style and user interactivity"
+    "SPOTIFY_CLONE_DESCRIPTION": "Spotify Clone using Astro framework. Focused on style and user interactivity",
+    "DOWNLOAD_CV": "Download CV"
 }

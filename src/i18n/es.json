@@ -7,7 +7,7 @@
     "ABOUT_ME_PARAGRAPH_2": "Algunos de mis logros incluyen ayudar a mis compañeros de clases. Esto me dio fuerzas para continuar hoy en día, <strong>a ayudar a las personas que están empezando</strong> en el mundo de la programación.",
     "ABOUT_ME_PARAGRAPH_3": "Además, una de mis virtudes es que <strong>sé trabajar en equipo</strong>, y aprendo rápido siempre, por lo que me considero <strong>autodidacta</strong>.",
     "ABOUT_ME_PARAGRAPH_4": "Como experiencia in programación, <strong>tengo muchos proyectos desarrollados en diferentes lenguajes de programación</strong>, que puedes ver en esta misma página.",
-    "STATUS_AVAILABLE_TEXT" : "Disponible para trabajar !",
+    "STATUS_AVAILABLE_TEXT": "Disponible para trabajar !",
     "STATUS_NON_AVAILABLE_TEXT": "No disponible",
     "STATUS_PARTIAL_TEXT": "Trabajando, pero abierto a ofertas",
     "AT_THE_MOMENT_DATE": "Actualmente...",
@@ -25,5 +25,6 @@
     "JAVA_COMMON_TITLE": "Mi librería Java Common",
     "JAVA_COMMON_DESCRIPTION": "Una librería de java con útiles de cadenas, matemáticas y vectores. Además, contiene clases para trabajar con el teclado fácilmente y mostrar una salida en forma de tabla.",
     "SPOTIFY_CLONE_TITLE": "Clon de Spotify con Astro",
-    "SPOTIFY_CLONE_DESCRIPTION": "Clon de Spotify usando Astro. Centrado en el estilo y la interactividad con el usuario."
+    "SPOTIFY_CLONE_DESCRIPTION": "Clon de Spotify usando Astro. Centrado en el estilo y la interactividad con el usuario.",
+    "DOWNLOAD_CV": "Descargar CV"
 }

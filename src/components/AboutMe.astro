@@ -22,6 +22,18 @@ const locale = getI18N({ currentLocale });
         <p set:html={locale.ABOUT_ME_PARAGRAPH_3}></p>
 
         <p set:html={locale.ABOUT_ME_PARAGRAPH_4}></p>
+
+        <a href="https://drive.google.com/file/d/1TCwG4TNJUV4CSmNMAyOox2AX4Ik0a0Jk/view?usp=drive_link" class=`
+            block 
+            border border-purple-500 rounded-lg
+            hover:bg-purple-500
+            text-purple-500 hover:text-white
+            transition transition-all duration-500
+            text-center
+            py-2
+            w-full
+            text-2xl
+        `>{locale.DOWNLOAD_CV}</a>
     </div>
 
     <img width="200" height="200" src="/images/profile/me.jpg" alt="irudev image" 
