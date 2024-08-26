@@ -16,7 +16,11 @@ const locale = getI18N({currentLocale})
     <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
         {locale.SEO_TITLE}
     </h1>
-    <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-purple-200 [&>strong]:text-purple-500 [&>strong]:font-semibold dark:text-gray-300" set:html={locale.SEO_DESCRIPTION}></p>
+    <p class=`
+        mt-6 
+        text-xl text-gray-800 dark:text-gray-300 
+        dark:[&>strong]:text-purple-200 [&>strong]:text-purple-500 [&>strong]:font-semibold
+    ` set:html={locale.SEO_DESCRIPTION}></p>
 
     <nav class="flex flex-wrap gap-4 mt-8">
         <SocialPill href="mailto:ruben.moreno.narbona.96@gmail.com">

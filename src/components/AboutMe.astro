@@ -4,8 +4,17 @@ import { getI18N } from "@/i18n";
 const { currentLocale } = Astro;
 const locale = getI18N({ currentLocale });
 ---
-<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
-        <div class="[&>p]:mb-4 [&>p>strong]:text-purple-500 dark:[&>p>strong]:text-purple-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1">
+<article class=`
+    flex flex-col items-center justify-center gap-8 md:flex-row
+    text-gray-700 dark:text-gray-300 
+`>
+        <div class=`
+            [&>p]:mb-4 
+            [&>p>strong]:text-purple-500 dark:[&>p>strong]:text-purple-100 
+            [&>p>strong]:font-normal [&>p>strong]:font-mono
+            text-pretty 
+            order-2 md:order-1
+        `>
         <p set:html={locale.ABOUT_ME_PARAGRAPH_1}></p>
 
         <p set:html={locale.ABOUT_ME_PARAGRAPH_2}></p>
@@ -15,5 +24,16 @@ const locale = getI18N({ currentLocale });
         <p set:html={locale.ABOUT_ME_PARAGRAPH_4}></p>
     </div>
 
-    <img width="200" height="200" src="/images/profile/me.jpg" alt="irudev image" class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-purple-500/5 ring-1 ring-black/70 dark:ring-white/70" style="object-position: 50% 50%">
+    <img width="200" height="200" src="/images/profile/me.jpg" alt="irudev image" 
+    class=`
+        w-64 h-full lg:w-64
+        bg-black/20 dark:bg-purple-500/5 
+        rounded-2xl 
+        ring-1 ring-black/70 dark:ring-white/70
+        order-1 md:order-2
+        object-cover 
+        rotate-3 
+        p-1 lg:p-2 
+        aspect-square 
+    ` style="object-position: 50% 50%">
 </article>
