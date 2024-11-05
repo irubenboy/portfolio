@@ -1,14 +1,17 @@
 ---
-import NextJSIcon from "@/icons/NextJS.astro"
-import TailwindIcon from "@/icons/Tailwind.astro"
-import JavaIcon from "@/icons/Java.astro"
-import AstroLogo from "@/icons/AstroLogo.astro"
+import NextJSIcon from "@/icons/NextJS.astro";
+import TailwindIcon from "@/icons/Tailwind.astro";
+import JavaIcon from "@/icons/Java.astro";
+import AstroLogo from "@/icons/AstroLogo.astro";
+import JavascriptIcon from "@/icons/Javascript.astro";
+import HTMLIcon from "@/icons/HTML.astro";
+import CSSIcon from "@/icons/CSS.astro";
 
-import ProjectItem from "@/components/ProjectItem.astro"
-import { getI18N } from "@/i18n"
+import ProjectItem from "@/components/ProjectItem.astro";
+import { getI18N } from "@/i18n";
 
-const {currentLocale} = Astro
-const locale = getI18N({currentLocale})
+const { currentLocale } = Astro;
+const locale = getI18N({ currentLocale });
 
 const TAGS = {
   NEXT: {
@@ -22,47 +25,66 @@ const TAGS = {
     icon: TailwindIcon,
   },
   JAVA: {
-    name: 'Java',
-    class: 'bg-white/90 text-black',
-    icon: JavaIcon
+    name: "Java",
+    class: "bg-white/90 text-black",
+    icon: JavaIcon,
   },
   ASTRO: {
-    name: 'Astro',
-    class: 'bg-black text-white',
-    icon: AstroLogo
-  }
-}
+    name: "Astro",
+    class: "bg-black text-white",
+    icon: AstroLogo,
+  },
+  CSS: {
+    name: "CSS",
+    icon: CSSIcon,
+    class: "bg-sky-600 text-white",
+  },
+  HTML: {
+    name: "HTML",
+    icon: HTMLIcon,
+    class: "bg-amber-600 text-white",
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    icon: JavascriptIcon,
+    class: "bg-yellow-400 text-white",
+  },
+};
 
 const PROJECTS = [
   {
     title: locale.JAVA_COMMON_TITLE,
     description: locale.JAVA_COMMON_DESCRIPTION,
-    github: 'https://github.com/irubenboy/common',
-    image: '/portfolio/images/projects/common.png',
-    tags: [TAGS.JAVA]
+    github: "https://github.com/irubenboy/common",
+    image: "/portfolio/images/projects/common.png",
+    tags: [TAGS.JAVA],
   },
   {
     title: locale.SPOTIFY_CLONE_TITLE,
     description: locale.SPOTIFY_CLONE_DESCRIPTION,
-    github: 'https://github.com/irubenboy/spotify-clone-with-astro',
-    image: '/portfolio/images/projects/spotify.png',
-    tags: [TAGS.ASTRO]
+    github: "https://github.com/irubenboy/spotify-clone-with-astro",
+    image: "/portfolio/images/projects/spotify.png",
+    tags: [TAGS.ASTRO],
   },
   {
     title: locale.PORTFOLIO,
     description: locale.PORTFOLIO_DESCRIPTION,
-    github: 'https://github.com/irubenboy/portfolio-dev.git',
-    link: 'https://irubenboy.github.io/portfolio/',
-    image: '/portfolio/images/projects/portfolio.png',
-    tags: [TAGS.ASTRO]
-  }
-]
+    github: "https://github.com/irubenboy/portfolio-dev.git",
+    link: "https://irubenboy.github.io/portfolio/",
+    image: "/portfolio/images/projects/portfolio.png",
+    tags: [TAGS.ASTRO],
+  },
+  {
+    title: locale.TIER_MAKER_TITLE,
+    description: locale.TIER_MAKER_DESCRIPTION,
+    github: "https://github.com/irubenboy/tier-maker",
+    link: "https://tiermakerclone.netlify.app/",
+    image: "/portfolio/images/projects/tiermaker.png",
+    tags: [TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
+  },
+];
 ---
 
 <div class="flex flex-col gap-y-16">
-    {
-        PROJECTS.map(project => (
-            <ProjectItem {...project} />
-        ))
-    }
+  {PROJECTS.map((project) => <ProjectItem {...project} />)}
 </div>

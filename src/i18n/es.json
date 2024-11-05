@@ -28,5 +28,7 @@
     "SPOTIFY_CLONE_DESCRIPTION": "Clon de Spotify usando Astro. Centrado en el estilo y la interactividad con el usuario.",
     "DOWNLOAD_CV": "Descargar CV",
     "PORTFOLIO": "Porfolio",
-    "PORTFOLIO_DESCRIPTION": "Un proyecto porfolio web para mostrar todos mis proyectos en un único lugar."
+    "PORTFOLIO_DESCRIPTION": "Un proyecto porfolio web para mostrar todos mis proyectos en un único lugar.",
+    "TIER_MAKER_TITLE": "Tier Maker",
+    "TIER_MAKER_DESCRIPTION": "Un clone de Tier Maker Clone con la API de Drag & Drop y otras funcionalidades."
 }

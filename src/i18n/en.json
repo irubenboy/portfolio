@@ -28,5 +28,7 @@
     "SPOTIFY_CLONE_DESCRIPTION": "Spotify Clone using Astro framework. Focused on style and user interactivity",
     "DOWNLOAD_CV": "Download CV",
     "PORTFOLIO": "Portfolio",
-    "PORTFOLIO_DESCRIPTION": "A portfolio web project to show all my projects in one place."
+    "PORTFOLIO_DESCRIPTION": "A portfolio web project to show all my projects in one place.",
+    "TIER_MAKER_TITLE": "Tier Maker",
+    "TIER_MAKER_DESCRIPTION": "A Tier Maker Clone with Drag & Drop Api and another features."
 }
