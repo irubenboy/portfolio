@@ -6,6 +6,7 @@ import AstroLogo from "@/icons/AstroLogo.astro";
 import JavascriptIcon from "@/icons/Javascript.astro";
 import HTMLIcon from "@/icons/HTML.astro";
 import CSSIcon from "@/icons/CSS.astro";
+import ReactIcon from "@/icons/React.astro";
 
 import ProjectItem from "@/components/ProjectItem.astro";
 import { getI18N } from "@/i18n";
@@ -49,6 +50,11 @@ const TAGS = {
     icon: JavascriptIcon,
     class: "bg-yellow-400 text-white",
   },
+  REACT: {
+    name: "React",
+    icon: ReactIcon,
+    class: 'bg-[#077A9F] text-white'
+  }
 };
 
 const PROJECTS = [
@@ -58,6 +64,7 @@ const PROJECTS = [
     github: "https://github.com/irubenboy/common",
     image: "/portfolio/images/projects/common.png",
     tags: [TAGS.JAVA],
+    date: "2023-10-04 12:24 PM"
   },
   {
     title: locale.SPOTIFY_CLONE_TITLE,
@@ -65,6 +72,7 @@ const PROJECTS = [
     github: "https://github.com/irubenboy/spotify-clone-with-astro",
     image: "/portfolio/images/projects/spotify.png",
     tags: [TAGS.ASTRO],
+    date: "2024-08-06 09:11 PM"
   },
   {
     title: locale.PORTFOLIO,
@@ -73,6 +81,7 @@ const PROJECTS = [
     link: "https://irubenboy.github.io/portfolio/",
     image: "/portfolio/images/projects/portfolio.png",
     tags: [TAGS.ASTRO],
+    date: "2024-11-05 07:10 PM"
   },
   {
     title: locale.TIER_MAKER_TITLE,
@@ -81,8 +90,31 @@ const PROJECTS = [
     link: "https://tiermakerclone.netlify.app/",
     image: "/portfolio/images/projects/tiermaker.png",
     tags: [TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
+    date: "2024-11-05 06:34 PM"
   },
+  {
+    title: locale.EXCEL_TITLE,
+    description: locale.EXCEL_DESCRIPTION,
+    github: "https://github.com/irubenboy/excel.js",
+    link: "https://sheetsjs.netlify.app/",
+    image: "/portfolio/images/projects/exceljs.png",
+    tags: [TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT],
+    date: "2024-11-20 12:17 PM"
+  },
+  {
+    title: locale.HP_TITLE,
+    description: locale.HP_DESCRIPTION,
+    github: "https://github.com/irubenboy/harry-potter",
+    link: "https://harrypotter-unofficial.netlify.app/",
+    image: "/portfolio/images/projects/hp.png",
+    tags: [TAGS.CSS, TAGS.HTML, TAGS.JAVASCRIPT, TAGS.REACT],
+    date: "2025-02-18 12:39 PM"
+  }
 ];
+
+PROJECTS.sort((a,b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime() 
+})
 ---
 
 <div class="flex flex-col gap-y-16">

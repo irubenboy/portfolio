@@ -30,5 +30,9 @@
     "PORTFOLIO": "Portfolio",
     "PORTFOLIO_DESCRIPTION": "A portfolio web project to show all my projects in one place.",
     "TIER_MAKER_TITLE": "Tier Maker",
-    "TIER_MAKER_DESCRIPTION": "A Tier Maker Clone with Drag & Drop Api and another features."
+    "TIER_MAKER_DESCRIPTION": "A Tier Maker Clone with Drag & Drop Api and another features.",
+    "EXCEL_TITLE": "Excel JS",
+    "EXCEL_DESCRIPTION": "An Excel App with vainilla JS",
+    "HP_TITLE": "Harry Potter Unofficial",
+    "HP_DESCRIPTION": "AN unofficial Harry Potter web based to official web."
 }
